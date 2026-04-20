@@ -5,7 +5,7 @@ export async function getVendedores() {
         .from('vendedor')
         .select('*');
     if (error) console.error('Error al obtener vendedores:', error);
-    return data;
+    return data || [];
 }
 
 export async function getVentasPorFecha(fechaInicio, fechaFin) {
@@ -15,13 +15,14 @@ export async function getVentasPorFecha(fechaInicio, fechaFin) {
         .gte('fecha_venta', fechaInicio)
         .lte('fecha_venta', fechaFin);
     if (error) console.error('Error al obtener ventas:', error);
-    return data;
+    return data || [];
 }
 
 export async function getReglas() {
     const { data, error } = await supabase
         .from('regla')
-        .select('*');
+        .select('*')
+        .order('monto_minimo', { ascending: false });
     if (error) console.error('Error al obtener reglas:', error);
-    return data;
+    return data || [];
 }
