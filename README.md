@@ -55,7 +55,7 @@ Aplicación web que calcula la comisión de ventas de vendedores en base a un ra
 1. Clona el repositorio
 
 ```bash
-   git clone https://github.com/JohannCalva/minicore.git
+   git clone https://github.com/JohannCalva/ejercicio-mvc-minicore.git
    cd minicore
 ```
 
@@ -69,7 +69,7 @@ Aplicación web que calcula la comisión de ventas de vendedores en base a un ra
 
 ```bash
    VITE_SUPABASE_URL=tu_url
-   VITE_SUPABASE_ANON_KEY=tu_publishable_key
+   VITE_SUPABASE_PUBLISHABLE_KEY=tu_publishable_key
 ```
 
 4. Ejecuta el proyecto
@@ -77,12 +77,6 @@ Aplicación web que calcula la comisión de ventas de vendedores en base a un ra
 ```bash
    npm run dev
 ```
-
-## Documentación oficial
-
-- [Documentación React](https://react.dev/)
-- [Documentación Vite](https://vitejs.dev/guide/)
-- [Documentación Supabase](https://supabase.com/docs)
 
 ## Autor
 
